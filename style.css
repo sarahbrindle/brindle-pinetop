@@ -6,9 +6,9 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-pinetop
 GitHub Branch:    master
-Version: v1.0.4
+Version: v1.0.5
 Template:		 generatepress
-Date:            10-06-2021
+Date:            07-08-2021
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -357,8 +357,24 @@ body .floorplans.type-floorplans{
 body .floorplangrid a.button{
     text-align: center;
 }
-
-
+.gb-banner-section{
+	position: relative;
+}
+.gb-banner-section:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right:0;
+	bottom: 0;
+	z-index: 1;
+	background-color: rgba(0,0,0,.2);
+}
+.gb-banner-section .gb-inside-container{
+	position: relative;
+	z-index:2;
+}
 /*============colors============*/
 /*
 .top-bar .top-bar-title{
@@ -461,7 +477,12 @@ body ul.social-media-links-grp.wp-block-social-links .wp-social-link a{
 body ul.social-media-links-grp.wp-block-social-links .wp-social-link a:hover{
     /*background-color: #c4913e!important;*/
 }
-
+.landing-form {
+    background-color: #ffffff;
+    padding: 20px 20px;
+    padding-left: 20px;
+    
+}
 /*===========media-queries==============*/
 
 @media(max-width:1200px){
@@ -618,6 +639,9 @@ body ul.social-media-links-grp.wp-block-social-links .wp-social-link a:hover{
         flex-direction: column;
         align-items: center;
     }
+}
+@media (min-width:641px) {
+    .landing-form{padding-left: 30px;}
 }
 @media(max-width:475px){
     .footer-brand{
