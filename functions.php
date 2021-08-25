@@ -33,6 +33,11 @@ function my_scripts_method() {
 add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 
+add_action( 'wp_enqueue_scripts', function() {
+
+    wp_enqueue_style( 'dashicons' );
+
+} );
 
 add_theme_support('editor-styles');
 add_action( 'enqueue_block_editor_assets', function() {
