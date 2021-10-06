@@ -115,6 +115,7 @@ body{
     top: 0;
     bottom: 0;
     width: 100vw;
+    background-color: inherit;
 }
 .site-header .inside-header{
     align-items: flex-end;
@@ -441,9 +442,13 @@ body .floorplangrid a.button{
 .slideout-overlay{
     background-color: transparent!important;
 }
-
+/*
 body #generate-slideout-menu{
     background-color: #fff!important;
+}
+*/
+#menu-footer-menu li a:hover,#menu-footer-menu li.current_page_item a{
+    color: inherit;
 }
 
 .slideout-navigation.main-navigation .main-nav ul li a{
@@ -482,6 +487,15 @@ body ul.social-media-links-grp.wp-block-social-links .wp-social-link a:hover{
     padding: 20px 20px;
     padding-left: 20px;
     
+}
+/*wp block*/
+.wp-block-button .wp-block-button__link {
+    letter-spacing: 0.12em;
+    padding: 22px 59px;
+}
+
+.is-style-outline > .wp-block-button__link, .wp-block-button__link.is-style-outline{
+    border-width: 1px;
 }
 /*===========media-queries==============*/
 
