@@ -6,9 +6,9 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-pinetop
 GitHub Branch:    master
-Version: v1.0.1
+Version: v1.0.2
 Template:		 generatepress
-Date:            25-08-2021
+Date:            25-10-2021
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -461,14 +461,18 @@ body #generate-slideout-menu{
 body .resp-tabs-list li{
     /*color: #181c27!important;*/
 }
+ul.resp-tabs-list li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 ul.resp-tabs-list .resp-tab-active{
-    background-color: transparent!important;
-    /*color: #c4913e !important;*/
-    outline: 1px dotted;
+    /*background-color: transparent!important;
+    color: #c4913e !important;
+    outline: 1px dotted;*/
 }
 ul.resp-tabs-list .resp-tab-item:hover {
-    background-color: transparent !important;
-   /* color: #c4913e !important;*/
+   /* background-color: transparent !important;
+    color: #c4913e !important;*/
 }
 body .section-apartments-links{
     border-top: 1px solid rgba(0,0,0,.07)!important;
@@ -496,6 +500,9 @@ body ul.social-media-links-grp.wp-block-social-links .wp-social-link a:hover{
 
 .is-style-outline > .wp-block-button__link, .wp-block-button__link.is-style-outline{
     border-width: 1px;
+}
+.insta-btn{
+    margin-top: -35px!important;
 }
 /*===========media-queries==============*/
 
