@@ -1,15 +1,19 @@
 <?php 
 
+// define a constant for the child theme version
+define( 'CHILD_THEME_VERSION', '1.0.4' );
+
 add_action( 'wp_enqueue_scripts', 'brindle_enqueue_scripts_styles' );
 function brindle_enqueue_scripts_styles() {
-	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' ); 
-	wp_enqueue_style( 'easy-responsive-tabs', get_stylesheet_directory_uri() . '/assets/css/easy-responsive-tabs.css' ); 
+	
+	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', array(), CHILD_THEME_VERSION ); 
+	wp_enqueue_style( 'easy-responsive-tabs', get_stylesheet_directory_uri() . '/assets/css/easy-responsive-tabs.css', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_script( 'easy-responsive-tabs', get_stylesheet_directory_uri() . '/assets/js/easy-responsive-tabs.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'jquery-scrolltofixed', get_stylesheet_directory_uri() . '/assets/js/jquery-scrolltofixed-min.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/assets/js/script.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'show-hide-amenities', get_stylesheet_directory_uri() . '/assets/js/show-hide-amenities.js', array( 'jquery' ), '1.0', true );
-	wp_register_script('custom_script', get_stylesheet_directory_uri() . '/assets/js/all.min.js', array('jquery'),'1.0',true);
+	wp_enqueue_script( 'easy-responsive-tabs', get_stylesheet_directory_uri() . '/assets/js/easy-responsive-tabs.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'jquery-scrolltofixed', get_stylesheet_directory_uri() . '/assets/js/jquery-scrolltofixed-min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/assets/js/script.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'show-hide-amenities', get_stylesheet_directory_uri() . '/assets/js/show-hide-amenities.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_register_script('custom_script', get_stylesheet_directory_uri() . '/assets/js/all.min.js', array('jquery'), CHILD_THEME_VERSION,true);
 }
 
 // Includes color stuff
