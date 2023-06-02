@@ -1,25 +1,14 @@
-jQuery(document).ready(function() {
-  jQuery('#masthead').scrollToFixed();
-});
+// Wait until the document is ready
+jQuery(document).ready(function ($) {
+    // Fix the masthead to the top when scrolling
+    $('#masthead').scrollToFixed();
 
-jQuery( document ).ready( function( $ ) {
-    $( '.close-bar' ).on( 'click', function( e ) {
+    // Listen for a click event on the element with class 'close-bar'
+    $('.close-bar').on('click', function (e) {
+        // Prevent the default action for the event (like navigation)
         e.preventDefault();
 
-        $( 'body' ).css( 'transformY', '-145px' ); /* height of top bar */
-    } );
-} );
-
-jQuery( document ).ready( function( $ ) {
-    $( ".full-list" ).each(function( i ) {         
-        if( $(this).length )         // use this if you are using id to check
-        {
-            $(this).children('li:gt(4)').hide();
-        }
+        // Apply a css transform to move the body up by the height of the top bar
+        $('body').css('transformY', '-145px');
     });
-    $( '.view-full-list' ).on( 'click', function( e ) {
-        e.preventDefault();         
-        $(this).parent().parent().find(".full-list").children('li:gt(4)').show();
-        $(this).hide();
-    } );
-} );
+});
